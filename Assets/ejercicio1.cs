@@ -30,24 +30,23 @@ public class ejercicio1 : MonoBehaviour
         int recaudadocampo;
         int recaudadoplatea;
         int totalrecaudado;
-        int restovacante;
-
+       
         if(personascampo <= 0 | personasplatea <= 0 | personascampo > 20400 | personasplatea > 16200)
         {
-            Debug.Log("Ingrese los valores reales");
+            Debug.Log("Ingrese valores reales");
         }
 
         recaudadocampo = personascampo * preciocampo;
         recaudadoplatea = personasplatea * precioplatea;
         totalrecaudado = recaudadocampo + recaudadoplatea;
-        Debug.Log("Se recaudo" + recaudadocampo + "por las personas en el campo y "+ recaudadoplatea + " por las personas en la platea. En total se recaudo" + totalrecaudado);
+        Debug.Log("Se recaudo" + recaudadocampo + " por las personas en el campo y "+ recaudadoplatea + " por las personas en la platea. En total se recaudo" + totalrecaudado);
 
-         restovacante = estadiolleno - personascampo - personasplatea;
-        if(restovacante == estadiolleno)
+        
+        if(espectadorestotales == estadiolleno)
         {
             Debug.Log("Sold Out");
         }
-        else if(restovacante >= espectadorestotales / 2)
+        else if(espectadorestotales >= estadiolleno / 2)
         {
             Debug.Log("Fue un Exíto");
         }
